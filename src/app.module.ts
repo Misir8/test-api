@@ -6,9 +6,9 @@ import { AppService } from './app.service';
 import { User } from './entities/user.entity';
 import { Task } from './entities/task.entity';
 import { Log } from './entities/log.entity';
-import { AuthModule } from './auth/auth.module';
-import { TasksModule } from './tasks/tasks.module';
-import { LogModule } from './log/log.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { TasksModule } from './modules/tasks/tasks.module';
+import { LogModule } from './modules/log/log.module';
 import { LoggerMiddleware } from './middleware/logger.middleware';
 
 @Module({

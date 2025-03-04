@@ -14,7 +14,7 @@ import { TasksService } from './tasks.service';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskStatusDto } from './dto/update-task-status.dto';
 import { GetUser } from '../auth/get-user.decorator';
-import { User } from '../entities/user.entity';
+import { User } from '../../entities/user.entity';
 import {
   ApiTags,
   ApiOperation,

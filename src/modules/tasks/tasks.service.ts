@@ -5,9 +5,9 @@ import {
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Task, TaskStatus } from '../entities/task.entity';
-import { Log, LogTaskStatus } from '../entities/log.entity';
-import { User } from '../entities/user.entity';
+import { Task, TaskStatus } from '../../entities/task.entity';
+import { Log, LogTaskStatus } from '../../entities/log.entity';
+import { User } from '../../entities/user.entity';
 import { CreateTaskDto } from './dto/create-task.dto';
 
 @Injectable()
