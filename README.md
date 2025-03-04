@@ -99,8 +99,8 @@ API для управления пользователями и их задач�
 
 1. Клонировать репозиторий:
 ```bash
-git clone https://github.com/yourusername/task-management-api.git
-cd task-management-api
+git clone https://github.com/misir8/test-api.git
+cd test-api
 ```
 
 2. Установить зависимости:
