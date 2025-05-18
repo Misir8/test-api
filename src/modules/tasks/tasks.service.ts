@@ -9,6 +9,7 @@ import { Task, TaskStatus } from '../../entities/task.entity';
 import { Log, LogTaskStatus } from '../../entities/log.entity';
 import { User } from '../../entities/user.entity';
 import { CreateTaskDto } from './dto/create-task.dto';
+import ERROR_MESSAGES from 'src/constants/errorMessages';
 
 @Injectable()
 export class TasksService {
@@ -61,13 +62,11 @@ export class TasksService {
     });
 
     if (!task) {
-      throw new NotFoundException(`Задача с ID "${taskId}" не найдена`);
+      throw new NotFoundException(ERROR_MESSAGES.TASK_NOT_FOUND);
     }
 
     if (task.userId !== user.id) {
-      throw new UnauthorizedException(
-        'Вы не имеете прав на изменение этой задачи',
-      );
+      throw new UnauthorizedException(ERROR_MESSAGES.UNAUTHORIZED_UPDATE);
     }
 
     // Если статус не изменился, просто возвращаем задачу
@@ -114,13 +113,11 @@ export class TasksService {
     });
 
     if (!task) {
-      throw new NotFoundException(`Задача с ID "${taskId}" не найдена`);
+      throw new NotFoundException(ERROR_MESSAGES.TASK_NOT_FOUND);
     }
 
     if (task.userId !== user.id) {
-      throw new UnauthorizedException(
-        'Вы не имеете прав на удаление этой задачи',
-      );
+      throw new UnauthorizedException(ERROR_MESSAGES.UNAUTHORIZED_DELETE);
     }
 
     await this.taskRepository.remove(task);
