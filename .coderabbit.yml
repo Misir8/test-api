@@ -1,0 +1,15 @@
+review:
+  enabled: true                 # Включить автоматическое ревью
+  summary: true                 # Писать итоговый комментарий
+  inline_comments: true         # Делать комментарии прямо в строках PR
+  max_files: 100                 # Не ревьювить, если изменено больше 100 файлов
+  max_lines: 5000                # Не ревьювить, если изменено больше 5000 строк
+  min_lines: 1                 # Не ревьювить слишком мелкие PR (менее 1 строк)
+
+comment:
+  tone: formal                  # Стиль общения: formal, friendly, casual
+  include_suggestions: true     # Давать предложения по улучшению кода
+  respond_to_comments: false    # Не отвечать на обычные user-комментарии
+
+linting:
+  enabled: true                 # Проводить базовую проверку стиля и ошибок

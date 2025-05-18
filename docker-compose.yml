@@ -5,7 +5,7 @@ services:
     image: postgres:14
     container_name: task-management-postgres
     ports:
-      - "${DB_PORT:-5432}:5432"
+      - "${DB_PORT:-5450}:5432"
     environment:
       POSTGRES_USER: ${DB_USERNAME:-postgres}
       POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
